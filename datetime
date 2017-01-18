@@ -1,0 +1,194 @@
+Script started on Sun 20 Nov 2016 07:10:52 PM IST
+]0;root@ol4:~/pythoncode[?1034hnaveen@ol4:>python
+Python 2.7.5 (default, Sep 14 2016, 08:35:31) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+[?1034h>>> import datetime
+>>> today/[K=datetime.date.tof[Kdy[Kay()
+>>> today
+datetime.date(2016, 11, 20)
+>>> print today.year
+2016
+>>> print today.month
+11
+>>> print today.hour
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'datetime.date' object has no attribute 'hour'
+>>> print today.hours
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'datetime.date' object has no attribute 'hours'
+>>> dir(tda[K[Koday)
+['__add__', '__class__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__ne__', '__new__', '__radd__', '__reduce__', '__reduce_ex__', '__repr__', '__rsub__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', 'ctime', 'day', 'fromordinal', 'fromtimestamp', 'isocalendar', 'isoformat', 'isoweekday', 'max', 'min', 'month', 'replace', 'resolution', 'strftime', 'timetuple', 'today', 'toordinal', 'weekday', 'year']
+>>> today=datetime.date.today()
+>>> dir(tpdau[K[K[K[Koday)
+['__add__', '__class__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__ne__', '__new__', '__radd__', '__reduce__', '__reduce_ex__', '__repr__', '__rsub__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', 'ctime', 'day', 'fromordinal', 'fromtimestamp', 'isocalendar', 'isoformat', 'isoweekday', 'max', 'min', 'month', 'replace', 'resolution', 'strftime', 'timetuple', 'today', 'toordinal', 'weekday', 'year']
+>>> print today.year
+2016
+>>> print today.weekday
+<built-in method weekday of datetime.date object at 0x7f14b52c5210>
+>>> print today.weekday()
+6
+>>> today
+datetime.date(2016, 11, 20)
+>>> type(today)
+<type 'datetime.date'>
+>>> today.strd[Kftime('%B %d, %Y')
+'November 20, 2016'
+>>> today.strftime('%B %d, %Y')[1@a[1@=
+>>> type(A)[K[Ka)
+<type 'str'>
+>>> type(a)[C[C[C[Ca=today.strftime('%B %d, %Y'),') ')%')H')
+>>> a=today.strftime('%B %d, %Y, %H')[C[C[C[Ctype(a)[K[C[C[C[Ca=today.strftime('%B %d, %Y, %H')[C[C[C[Ctype(a)[K[K[K[K[K[K[K[Ka
+'November 20, 2016, 00'
+>>> a=today.strftime('%B %d, %Y, %H'),') ')%')M')
+>>> a=today.strftime('%B %d, %Y, %H, %M')[C[C[C[C[C[K
+'November 20, 2016, 00, 00'
+>>> imrpot[K[K[K[Kport time
+>>> dir(time)
+['__doc__', '__file__', '__name__', '__package__', 'accept2dyear', 'altzone', 'asctime', 'clock', 'ctime', 'daylight', 'gmtime', 'localtime', 'mktime', 'sleep', 'strftime', 'strptime', 'struct_time', 'time', 'timezone', 'tzname', 'tzset']
+>>> dir(time.time)
+['__call__', '__class__', '__cmp__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']
+>>> time.localtime()
+time.struct_time(tm_year=2016, tm_mon=11, tm_mday=20, tm_hour=19, tm_min=18, tm_sec=45, tm_wday=6, tm_yday=325, tm_isdst=0)
+>>> exit()
+]0;root@ol4:~/pythoncodenaveen@ol4:>print [K[K[K[K[K[Kdate
+Sun Nov 20 19:19:09 IST 2016
+]0;root@ol4:~/pythoncodenaveen@ol4:>python
+Python 2.7.5 (default, Sep 14 2016, 08:35:31) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+[?1034h>>> import time
+>>> a=time.strftime("%Y:%B:%d:%H:%M:[K")
+>>> a
+'2016:November:20:19:20'
+>>> exit()
+]0;root@ol4:~/pythoncodenaveen@ol4:>date
+Sun Nov 20 19:20:27 IST 2016
+]0;root@ol4:~/pythoncodenaveen@ol4:>p[Ktme[K[Kime
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+]0;root@ol4:~/pythoncodenaveen@ol4:>p[Kex[K[Kpython
+Python 2.7.5 (default, Sep 14 2016, 08:35:31) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+[?1034h>>> import time
+>>> a=time.strftime("%Y:%B:%d:%H:%M"[K:%s[KS")
+>>> a
+'2016:November:20:19:20:59'
+>>> exit()
+]0;root@ol4:~/pythoncodenaveen@ol4:>date
+Sun Nov 20 19:21:03 IST 2016
+]0;root@ol4:~/pythoncodenaveen@ol4:>python
+Python 2.7.5 (default, Sep 14 2016, 08:35:31) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+[?1034h>>> date="Nov 20, 2016{[K"
+>>> dt[K[Kimport a[Kdatetie[Kme
+>>> dt=datetime.datetime.strptime(date,%B %d %Y)
+  File "<stdin>", line 1
+    dt=datetime.datetime.strptime(date,%B %d %Y)
+                                       ^
+SyntaxError: invalid syntax
+>>> dt=datetime.datetime.strptime(date,%B %d %Y)[C[1@'[C[C[C[C[C[C[C[C')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib64/python2.7/_strptime.py", line 325, in _strptime
+    (data_string, format))
+ValueError: time data 'Nov 20, 2016' does not match format '%B %d %Y'
+>>> dt=datetime.datetime.strptime(date,'%B %d %Y')[C[C[C. %Y')[1P %Y'), %Y')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib64/python2.7/_strptime.py", line 325, in _strptime
+    (data_string, format))
+ValueError: time data 'Nov 20, 2016' does not match format '%B %d, %Y'
+>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[C[C[C[C[C[C[C[Kdate
+'Nov 20, 2016'
+>>> datet=datetime.datetime.strptime(date,'%B %d, %Y')[K>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[K>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[K>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[K>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[K>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[K>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[K>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdate
+'Nov 20, 2016'
+>>> datet=datetime.datetime.strptime(date,'%B %d, %Y')[C[C[C[C[C[C[1P %Y'), %Y')[C[C[C[C[Cate[Kt=datetime.datetime.strptime(date,'%B %d, %Y')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib64/python2.7/_strptime.py", line 325, in _strptime
+    (data_string, format))
+ValueError: time data 'Nov 20, 2016' does not match format '%B %d, %Y'
+>>> date="Novemer[K[Kber 20, 2016)
+  File "<stdin>", line 1
+    date="November 20, 2016)
+                           ^
+SyntaxError: EOL while scanning string literal
+>>> date="November 20, 2016)[K"
+>>> date="November 20, 2016")[C[C[C[C[Ct=datetime.datetime.strptime(date,'%B %d, %Y')
+>>> dt
+datetime.datetime(2016, 11, 20, 0, 0)
+>>> dt=datetime.datetime.strptime(date,'%B %d, %Y')[C[C[C[C[C[23Pate="November 20, 2016"," "2"3":"[1P":"[1P"[1P"[1P"1"9":"3"4":"4"5"
+>>> date="November 20, 2016, 19:34:45"[C[C[C[C[Ct[K=datetime.datetime.strptime(date,'%B %d, %Y'),') ')%')H'):')%')M'):')%')S')
+>>> dt
+datetime.datetime(2016, 11, 20, 19, 34, 45)
+>>> dt
+datetime.datetime(2016, 11, 20, 19, 34, 45)
+>>> dt=datetime.datetime.strptime(date,'%B %d, %Y, %H:%M:%S')[C[C[C[C[C[23Pate="November 20, 2016, 19:34:45"[C[C[C[C[Ct[K=datetime.datetime.strptime(date,'%B %d, %Y')[C[C[C[C[C[23Pate="November 20, 2016")[C[C[C[C[Ct=datetime.datetime.strptime(date,'%B %d, %Y')[C[C[C[C[Cate[Kt=datetime.datetime.strptime(date,'%B %d, %Y')[1P %Y')[2P%B %d %Y)[C[C[C[C[29Pimport datetime[C[C[C[Cdate="Nov 20, 2016"[C[C[C[C[4Pimport datetime[C[C[C[Cdt=datetime.datetime.strptime(date,%B %d %Y)'%B %d %Y'), %Y')[C[C[C[C[Cate[Kt=datetime.datetime.strptime(date,'%B %d, %Y')[C[C[C[C[C[23Pate="November 20, 2016)"[C[C[C[C[Ct=datetime.datetime.strptime(date,'%B %d, %Y')[C[C[C[C[C[C[Kate="November 20, 2016, 19:34:45"[1@1[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@1
+>>> date1="November 21, 2016, 19:34:45"[C[C[C[C[Ct[K=datetime.datetime.strptime(date,'%B %d, %Y, %H:%M:%S')[C[C[C[C[C[23Pate="November 20, 2016, 19:34:45"[C[C[C[C[Ct=datetime.datetime.strptime(date,'%B %d, %Y, %H:%M:%S')[1@1
+>>> dt1
+datetime.datetime(2016, 11, 20, 19, 34, 45)
+>>> dt
+datetime.datetime(2016, 11, 20, 19, 34, 45)
+>>> dt2=dt1.dt[K[K[K-dt
+>>> print dt2
+0:00:00
+>>> print dt2[C[C[C[Cdt2=dt1-dt[C[C[C[C[C[C[K1[K[K[Kdate
+'November 20, 2016, 19:34:45'
+>>> date1
+'November 21, 2016, 19:34:45'
+>>> date1[Kprint dt2[C[C[C[Cdt2=dt1-dt[C[C[C[C[C[C[K1=datetime.datetime.strptime(date,'%B %d, %Y, %H:%M:%S')[1@1
+>>> dt
+datetime.datetime(2016, 11, 20, 19, 34, 45)
+>>> dt1
+datetime.datetime(2016, 11, 21, 19, 34, 45)
+>>> dt2=dt1-dt
+>>> dt2
+datetime.timedelta(1)
+>>> print dt2
+1 day, 0:00:00
+>>> dt2
+datetime.timedelta(1)
+>>> dtupe[K[K[K[K[Ktype(dt2)
+<type 'datetime.timedelta'>
+>>> dr[Kir(dt2)
+['__abs__', '__add__', '__class__', '__delattr__', '__div__', '__doc__', '__eq__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__mul__', '__ne__', '__neg__', '__new__', '__nonzero__', '__pos__', '__radd__', '__rdiv__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rmul__', '__rsub__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', 'days', 'max', 'microseconds', 'min', 'resolution', 'seconds', 'total_seconds']
+>>> [K>>> [K>>> [K>>> print dt2
+1 day, 0:00:00
+>>> a=dt2
+>>> type*a[K[K(a)
+<type 'datetime.timedelta'>
+>>> die([K[Kr(dt2)
+['__abs__', '__add__', '__class__', '__delattr__', '__div__', '__doc__', '__eq__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__mul__', '__ne__', '__neg__', '__new__', '__nonzero__', '__pos__', '__radd__', '__rdiv__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rmul__', '__rsub__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', 'days', 'max', 'microseconds', 'min', 'resolution', 'seconds', 'total_seconds']
+>>> r[Kprint d2.days
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'd2' is not defined
+>>> print d2.dayst2.days
+1
+>>> print dt2.days[K[K[K[K[K.min
+-999999999 days, 0:00:00
+>>> print dt2.min[K[K[Kseconds
+0
+>>> print dt2.seconds[K[K[K[K[K[K[Ktt[Kotat_seconds
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'datetime.timedelta' object has no attribute 'totat_seconds'
+>>> print dt2.totat_seconds[1P_secondsl_seconds
+<built-in method total_seconds of datetime.timedelta object at 0x7f9ccb03f058>
+>>> print dt2.total_secondst_seconds[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdt2
+datetime.timedelta(1)
+>>> pr[K[Ka=str(dt2)
+>>> a
+'1 day, 0:00:00'
+>>> exit()
+]0;root@ol4:~/pythoncodenaveen@ol4:>pd[K[Kexit
+exit
+
+Script done on Sun 20 Nov 2016 07:37:19 PM IST

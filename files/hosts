@@ -1,0 +1,6 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.0.2.21	ol4	ol4.localdomain
+10.0.2.24	puppet	puppet.localdomain
+10.0.2.9	rhel1	rhel1.localdomain
+10.0.2.23	jenkins	jenkins.localdomain

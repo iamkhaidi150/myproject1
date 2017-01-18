@@ -1,0 +1,163 @@
+Needed RPM's:
+-------------
+ 
+mysql-community-release-el7-5.noarch
+mysql-community-server-5.6.35-2.el7.x86_64
+mysql-connector-odbc-5.3.7-1.el7.x86_64
+mysql-connector-python-2.1.5-1.el7.x86_64
+mysql-community-libs-5.6.35-2.el7.x86_64
+mysql-community-client-5.6.35-2.el7.x86_64
+MySQL-python-1.2.5-1.el7.x86_64
+mysql-community-common-5.6.35-2.el7.x86_64
+ 
+PIP:
+ 
+pip install MySQL-python for python2.7
+ 
+(or)
+ 
+pip install PyMySQL  for python 3
+ 
+ 
+Install and Configure  Mysql:
+ 
+1. wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+2. sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+3. yum update
+4. yum install mysql-server
+     a> systemctl status mysqld.service
+     b> systemctl enable mysqld.service
+     c> systemctl start  mysqld.service
+ 
+5. mysqladmin -u root password "new_password";
+     (or)
+6. mysql -u root -p
+   Enter Password:**********
+ 
+Once the above root password is set then you can connect to the db using the root login and password
+ 
+[root@mysql yum.repos.d]# mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 5.6.35 MySQL Community Server (GPL)
+ 
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+ 
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+ 
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+ 
+mysql> show databases:
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+3 rows in set (0.00 sec)
+ 
+ 
+ 
+ 
+Data Types:
+ 
+INT: A normal sized integer that can be signed or unsigned, if signed the allowable range is from -2147483648 to 2147483647. If unsigned the allowable range is 0 to 4294967295. You can specify a  width of 11 digits
+ 
+TINYINT- A very small integer that can be signed or unsigned, If signed the allowable range is from -128 to 127, If unsigned the allowable range is from 0 to 255. You can specify a width of upto 4 digits
+ 
+SMALLINT - A small integer that can be signed or unsigned,if signed the allowable range is from -32768 to 32767, if unsigned the allowable range is from 0 to 65535, You can specify a width of upto 5 digits
+ 
+MEDIUMINT - A medium sized integer that can be signed or unsigned,If signed the allowable range is from -8388608 to 8388607. If unsigned the allowable range is from 0 to 16777215. You can specify a width of up to 9 digits
+ 
+BIGUNT - A large integer that can be signed or unsigned, if signed the allowable range is from -9223372036854775808 to 9223372036854775807,If unsignedm the allowable range is from 0 to 18446744073709551615. You can specify a width of upto 20 digits
+ 
+Float(M,D): A floating point number that cannot be unsigned, you can define the display lenth(M) and the number of decimals(D), This is not required and will default to 10,2, where 2 is the number of decimals and 10 is the total number of digits(including decimals). Decimal precision can go to 24 places for a FLOAT.
+ 
+ 
+ 
+ 
+Date and Time Types:
+ 
+DATE - A date in yyyy-mm-dd format, between 1000-01-01 and 9999-12-31. For example, December 30th, 1973 would be stored as 1973-12-30.
+ 
+DATETIME - A date and time combination in YYYY-MM-DD HH:MM:SS format, between 1000-01-01 00:00:00 and 9999-12-31 23:59:59. For example 3:30 in the afternoon in December 30th, 1973 would be stored as 1973-12-30 15:30:00
+ 
+TIMESTAMP- A timestamp between midnight, Jan 1, 1970 and sometime in 2037. This looks like the previous DATETIME format, only without the hyphens between numbers; 3:30 in the afternoon on December 30th, 1973 would be stored as 19731230153000 ( YYYYMMDDHHMMSS )
+ 
+TIME - Stores the time in HH:MM:SS format
+ 
+YEAR(M) - Stores a year in 2 - digit or 4- digit format, if the length is specified as 2(for example YEAR(2)), YEAR can be 1970 to 2069(70 to 69), If the length is specified as 4 , YEAR can be 1901 to 2155. The default length is 4.
+ 
+ 
+ 
+String Types:
+ 
+  Althogh numeric and date types are fun, most data you'll store will be in string format. This list describes the common string datatypes in MySQL.
+ 
+CHAR(M): A fixed length string between 1 and 255 characters in length(for example CHAR(5)), righ-padded with spaces to the specified length when stored. Defining a length is not required, but the default is 1.
+ 
+VARCHAR(M): A Variable legth string between 1 and 255 characters in length, for example VARCHAR(25).You must define a length when creating a VARCHAR field.
+ 
+BLOB or TEXT:  A fiedl with maximum length of 65535 characters, BLOBS are "Binary Large Objects" and are used to store large amounts of binary data such as images or other types of files. Fields defined as TEXT also hold large amounts of data; the difference between the two is that sorts and comparisions on stored data are case sensitive on BLOBS and are not case sensitive in TEXT fields. You donot specify a length with BLOB or TEXT
+ 
+TINYBLOB or TINYTEXT: A BLOB or TEXT column with a maximum length of 255 characters, you donot specify a length with TINYBLOB or TINYTEXT
+ 
+MEDIUMBLOB or MEDIUMTEXT:  A BLOB or TEXT column with a maximum length of 16777215 characters. You donot specify a length with MEDIUMBLOB or MEDIUMTEXT
+ 
+LONGBLOB or LONGTEXT: A BLOB or TEXT column with a maximum length of 4294967295 characters.You donot specify a length with LONGBLOB or LONGTEXT
+ 
+ENUM: An enumeration, which is a fancy term for list. When defining an ENUM, you are creating a list of items from which the value must be selected(or it can be NULL), For example if you wanted your field to contain "A" or "B" or "C", you would define your ENUM as ENUM ('A','B','C') and only those values (or NULL) could ever populate that field.
+ 
+ 
+CREATING  a Database and a TABLE:
+ 
+mysql> CREATE DATABASE employees;
+ 
+ 
+mysql> CREATE TABLE etable(empid INT NOT NULL, empname VARCHAR(30) NOT NULL, emptitle VARCHAR(30) NOT NULL, joining_date DATE, PRIMARY KEY(empid));
+ 
+ 
+ 
+CREATE a database from Python code
+ 
+ 
+#!/usr/bin/env python
+ 
+# Connect to db and create a table called beers that each have a name field and insert a couple beers
+ 
+import MySQLdb as mysqldb
+ 
+connection = mysqldb.connect('localhost', 'beeruser', 'beerpw', 'beerdb');
+ 
+with connection:
+    cursor = connection.cursor()
+    cursor.execute("create table beers(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(25))")
+    cursor.execute("insert into beers(name) values('Budweiser')")
+cursor.execute("insert into beers(name) values('Mystic')")
+cursor.execute("insert into beers(name) values('Sam Adams')")
+ 
+ 
+SELECT DATA from Python code
+ 
+ 
+#!/usr/bin/env python
+ 
+# Connect to db and create a table called beers that each have a name field and insert a couple beers
+ 
+import MySQLdb as mysqldb
+ 
+connection = mysqldb.connect('localhost', 'beeruser', 'beerpw', 'beerdb');
+ 
+with connection:
+    cursor = connection.cursor()
+    cursor.execute("select * from beers")
+    beers = cursor.fetchall()
+    for beer in beers:
+        print(beer)
